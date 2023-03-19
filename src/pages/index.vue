@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
+import { socialMedia } from '../utils/socialMediaInfo'
 
 useHead({
   title: 'Home',
@@ -10,10 +11,10 @@ const { t } = useI18n()
 
 <template>
   <div
-    class="flex min-h-[calc(100vh-6.5rem)] place-items-center bg-black bg-opacity-50 bg-[url('../assets/fondo2.webp')] bg-cover bg-center bg-no-repeat py-16 text-slate-50 bg-blend-overlay"
+    class="flex min-h-screen place-items-center bg-black bg-opacity-50 bg-[url('../assets/fondo2.webp')] bg-cover bg-center bg-no-repeat py-16 text-slate-50 bg-blend-overlay"
   >
     <div
-      class="container col-span-1 mx-auto grid min-w-fit max-w-5xl px-8 md:place-items-center"
+      class="container col-span-1 mx-auto grid min-w-fit max-w-5xl place-items-center px-8"
     >
       <div class="w-fit rounded-full bg-black">
         <img
@@ -23,40 +24,25 @@ const { t } = useI18n()
           class="h-64 w-64 rounded-full opacity-80"
         />
       </div>
-      <h1 class="text-7xl font-semibold">José Valencia</h1>
+      <h1 class="text-center text-7xl font-semibold">José Valencia</h1>
       <p class="text-3xl">{{ t('index.description') }}</p>
-      <div class="flex space-x-4 pt-2 text-2xl">
-        <a href="https://www.linkedin.com/in/josevc997/" target="_blank">
-          <Icon icon="mdi:linkedin" loading="lazy" />
-        </a>
-        <a href="https://www.facebook.com/josevc997/" target="_blank">
-          <Icon icon="mdi:facebook" loading="lazy" />
-        </a>
-        <a href="https://www.instagram.com/josevc997/" target="_blank">
-          <Icon icon="mdi:instagram" loading="lazy" />
-        </a>
-        <a href="https://twitter.com/josevc997" target="_blank">
-          <Icon icon="mdi:twitter" loading="lazy" />
-        </a>
-        <a href="https://github.com/josevc997" target="_blank">
-          <Icon icon="mdi:github" loading="lazy" />
-        </a>
+      <div class="flex space-x-4 pt-6 text-2xl">
         <a
-          href="mailto:19josevalencia97@gmail.com?subject=Contacto%20Web"
+          v-for="(red, index) in socialMedia"
+          :key="index"
+          :href="red.url"
           target="_blank"
         >
-          <Icon icon="mdi:gmail" loading="lazy" />
+          <Icon :icon="red.icon" loading="lazy" />
         </a>
       </div>
     </div>
   </div>
-  <div
-    class="flex min-h-screen place-content-center place-items-center bg-slate-100 py-16 px-4 text-slate-800"
-  >
+  <div class="flex place-content-center place-items-center py-16 px-4">
     <ThePersonalCardResume />
   </div>
   <div
-    class="container mx-auto grid grid-cols-1 place-content-center place-items-center"
+    class="container mx-auto grid max-w-7xl grid-cols-1 place-content-center place-items-center py-16"
   >
     <TheSoftwareDomain />
   </div>

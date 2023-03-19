@@ -1,7 +1,32 @@
 index:
-  title: Vinilo
   description: Desarrollador Full Stack
-  about: Acerca de
-user:
-  set_name: Establecer nombre
-  salute: Hola,
+
+software:
+  title: Tecnologías que uso
+
+resume:
+  greeting: Hola Mi nombre es José Valencia
+  first: Desarrollador de software fullstack. Me caracterizo por tener un fuerte
+    enfoque en el cumplimiento de metas y objetivos, lo que me ha permitido
+    alcanzar resultados exitosos en diversas tareas y proyectos. Siempre busco
+    la forma de ampliar mis conocimientos en las áreas relacionadas a mi
+    trabajo y estoy dispuesto a aprender nuevas tecnologías y metodologías
+    para mejorar mi desempeño.
+  second: Me considero una persona altamente adaptable, con gran capacidad para
+    enfrentar y resolver desafíos en el ámbito laboral. Gracias a mi
+    experiencia previa, puedo afirmar que he desarrollado habilidades para
+    trabajar en equipo y colaborar en el logro de objetivos comunes. Además,
+    poseo excelentes habilidades de comunicación, lo que me permite establecer
+    relaciones interpersonales de calidad con compañeros de trabajo y
+    clientes.
+  third: En consecuencia, mi formación académica y experiencias previas me han
+    permitido desarrollar una sólida base de conocimientos y habilidades, que
+    junto con mi capacidad de adaptación y enfoque en el cumplimiento de
+    metas, me convierten en un candidato ideal para diversos puestos de
+    trabajo relacionados con la tecnología y la informática.
+
+navbar:
+  home: Inicio
+
+footer:
+  rights: Todos los derechos reservados

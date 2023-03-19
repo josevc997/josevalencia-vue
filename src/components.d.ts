@@ -12,9 +12,9 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     Switch: typeof import('@headlessui/vue')['Switch']
+    TheFooter: typeof import('./components/TheFooter.vue')['default']
     TheNavbar: typeof import('./components/TheNavbar.vue')['default']
     ThePersonalCardResume: typeof import('./components/ThePersonalCardResume.vue')['default']
     TheSoftwareDomain: typeof import('./components/TheSoftwareDomain.vue')['default']
-    User: typeof import('./components/User.vue')['default']
   }
 }

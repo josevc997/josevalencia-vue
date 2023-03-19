@@ -1,22 +1,59 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
+const { t } = useI18n()
+const technologies = [
+  {
+    name: 'VueJS',
+    icon: 'mdi:vuejs',
+  },
+  {
+    name: 'React',
+    icon: 'mdi:react',
+  },
+  {
+    name: 'Python',
+    icon: 'mdi:language-python',
+  },
+  {
+    name: 'Django',
+    icon: 'cib:django',
+  },
+  {
+    name: 'AWS',
+    icon: 'mdi:aws',
+  },
+  {
+    name: 'GCloud',
+    icon: 'mdi:google-cloud',
+  },
+  {
+    name: 'Tailwind',
+    icon: 'mdi:tailwind',
+  },
+  {
+    name: 'Bootstrap',
+    icon: 'mdi:bootstrap',
+  },
+]
 </script>
 <template>
-  <div class="">
-    <h2 class="pt-10 text-center text-6xl font-medium text-slate-500">
-      Dominio
-    </h2>
-  </div>
+  <h2
+    class="text-center text-6xl font-medium text-slate-600 dark:text-slate-200"
+  >
+    {{ t('software.title') }}
+  </h2>
   <div
-    class="flex flex-col flex-wrap place-content-center place-items-center justify-around space-y-16 pb-16 text-4xl font-medium text-slate-400 sm:w-full sm:flex-row"
+    class="flex flex-col flex-wrap place-content-center place-items-center justify-around pb-16 text-4xl font-medium text-slate-500 dark:text-slate-300 sm:w-full sm:flex-row"
   >
     <div
-      class="mx-8 flex place-content-center place-items-center pt-16 text-center"
+      v-for="(tech, index) in technologies"
+      :key="index"
+      class="mx-8 flex place-content-center place-items-center space-x-2 pt-16 text-center"
     >
-      <Icon icon="mdi:vuejs" loading="lazy" />
-      <p>VueJS</p>
+      <Icon :icon="tech.icon" loading="lazy" />
+      <p>{{ tech.name }}</p>
     </div>
-    <div
+    <!-- <div
       class="mx-8 flex place-content-center place-items-center space-x-1 text-center"
     >
       <Icon icon="mdi:language-python" loading="lazy" />
@@ -45,6 +82,6 @@ import { Icon } from '@iconify/vue'
     >
       <Icon icon="mdi:react" loading="lazy" />
       <p>React</p>
-    </div>
+    </div> -->
   </div>
 </template>

@@ -5,7 +5,7 @@ import {
   ListboxOptions,
   ListboxOption,
 } from '@headlessui/vue'
-import { CheckIcon, ChevronDownIcon } from '@heroicons/vue/20/solid'
+import { CheckCircleIcon, ChevronDownIcon } from '@heroicons/vue/20/solid'
 
 const { locale, availableLocales } = useI18n()
 </script>
@@ -14,7 +14,7 @@ const { locale, availableLocales } = useI18n()
   <Listbox v-model="locale">
     <div class="relative">
       <ListboxButton
-        class="relative flex cursor-default items-end justify-between space-x-2 rounded border px-1 py-1 focus:outline-none focus-visible:border-slate-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-300 sm:text-sm"
+        class="relative mr-2 flex cursor-default items-end justify-between space-x-2 px-1 py-1 focus:outline-none focus-visible:border-slate-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-300 sm:text-sm"
       >
         <span class="">{{ locale }}</span>
         <ChevronDownIcon class="h-4 w-4 text-gray-400" aria-hidden="true" />
@@ -26,7 +26,7 @@ const { locale, availableLocales } = useI18n()
         leave-to-class="opacity-0"
       >
         <ListboxOptions
-          class="absolute mt-0.5 max-h-60 w-full cursor-default overflow-auto rounded bg-white text-base text-slate-900 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
+          class="absolute mt-2 max-h-60 w-20 cursor-default overflow-auto rounded bg-white text-base text-slate-900 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm"
         >
           <ListboxOption
             v-for="language in availableLocales"
@@ -36,11 +36,15 @@ const { locale, availableLocales } = useI18n()
             as="template"
           >
             <li
-              class="flex items-center justify-between px-1"
+              class="flex items-center justify-between py-2 px-3"
               :class="{ 'bg-slate-100': active }"
             >
               <span>{{ language }}</span>
-              <CheckIcon v-if="selected" class="h-3 w-3" aria-hidden="true" />
+              <CheckCircleIcon
+                v-if="selected"
+                class="h-4 w-4"
+                aria-hidden="true"
+              />
             </li>
           </ListboxOption>
         </ListboxOptions>

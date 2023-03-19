@@ -1,7 +1,31 @@
 index:
-  title: Vinilo
   description: Full Stack Developer
-  about: About
-user:
-  set_name: Set name
-  salute: Hello,
+
+software:
+  title: Technologies I use
+
+resume:
+  greeting: Hello My name is Jose Valencia
+  first: Fullstack software developer. I am characterized by having a strong
+    focus on meeting goals and objectives, which has allowed me to achieve
+    successful results in various tasks and projects. I am always looking for
+    ways to expand my knowledge in the areas related to my work and I am willing
+    to learn new technologies and methodologies to improve my performance.
+  second:
+    I consider myself a highly adaptable person, with great ability to face
+    and solve challenges in the workplace. Thanks to my previous experience,
+    I can affirm that I have developed skills to work in a team and collaborate
+    in the achievement of common goals. In addition, I possess excellent communication
+    skills, which allows me to establish quality interpersonal relationships with
+    co-workers and clients.
+  third:
+    Consequently, my academic background and previous experiences have allowed me
+    to develop a solid base of knowledge and skills, which together with my ability
+    to adapt and focus on achieving goals, make me an ideal candidate for various jobs
+    related to technology and information technology.
+
+navbar:
+  home: Home
+
+footer:
+  rights: All rights reserved
