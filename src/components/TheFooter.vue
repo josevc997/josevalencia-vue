@@ -16,7 +16,15 @@ const { t } = useI18n()
           <span class="inline-block">{{ t('footer.rights') }}</span>
         </p>
       </div>
-      <div class="flex space-x-2 text-xl">
+      <div>
+        <a href="https://www.netlify.com">
+          <img
+            src="https://www.netlify.com/v3/img/components/netlify-color-bg.svg"
+            alt="Deploys by Netlify"
+          />
+        </a>
+      </div>
+      <div class="flex items-center space-x-2 text-xl">
         <a
           v-for="(red, index) in socialMedia"
           :key="index"
