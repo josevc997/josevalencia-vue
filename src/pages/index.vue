@@ -3,8 +3,13 @@ import { Icon } from '@iconify/vue'
 import { socialMedia } from '../utils/socialMediaInfo'
 
 useHead({
-  title: 'Home',
-  meta: [{ name: 'description', content: 'Opinionated Vite Starter Template' }],
+  title: 'José Valencia',
+  meta: [
+    {
+      name: 'description',
+      content: 'Portafolio desarrollador fullstack José Valencia',
+    },
+  ],
 })
 const { t } = useI18n()
 </script>
